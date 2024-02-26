@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:backgroundTint="@color/white"
+    tools:context=".ProfileFragment">
+
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:src="@drawable/ic_profile" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="99dp"
+        android:background="#EAE8E8">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/btnUser"
+                style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:layout_marginBottom="10dp"
+                android:backgroundTint="@color/white"
+                android:drawableLeft="@drawable/ic_user_64"
+                android:drawableRight="@drawable/baseline_arrow_forward_ios_24"
+                android:drawablePadding="10dp"
+                android:gravity=""
+                android:paddingStart="10dp"
+                android:paddingRight="10dp"
+                android:text="User"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/btn0diem"
+                    style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/white"
+                    android:drawableLeft="@drawable/ic_coin_24"
+                    android:drawableRight="@drawable/baseline_arrow_forward_ios_24"
+                    android:drawablePadding="10dp"
+                    android:gravity=""
+                    android:paddingStart="10dp"
+                    android:paddingRight="10dp"
+                    android:text="@string/_0_i_m"
+                    android:textColor="@color/black" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_gravity="right"
+                    android:background="@android:color/darker_gray" />
+
+                <Button
+                    android:id="@+id/btnNoti"
+                    style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/white"
+                    android:drawableLeft="@drawable/ic_noti_24"
+                    android:drawableRight="@drawable/baseline_arrow_forward_ios_24"
+                    android:drawablePadding="10dp"
+                    android:gravity=""
+                    android:paddingStart="10dp"
+                    android:paddingRight="10dp"
+                    android:text="Notification"
+                    android:textColor="@color/black" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_gravity="right"
+                    android:background="@android:color/darker_gray" />
+
+                <Button
+                    android:id="@+id/btnFP"
+                    style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/white"
+                    android:drawableLeft="@drawable/ic_places_24"
+                    android:drawableRight="@drawable/baseline_arrow_forward_ios_24"
+                    android:drawablePadding="10dp"
+                    android:gravity=""
+                    android:paddingStart="10dp"
+                    android:paddingRight="10dp"
+                    android:text="Favorite Places"
+                    android:textColor="@color/black" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_gravity="right"
+                    android:background="@android:color/darker_gray" />
+
+                <Button
+                    android:id="@+id/btnBL"
+                    style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/white"
+                    android:drawableLeft="@drawable/ic_prohibition_24"
+                    android:drawableRight="@drawable/baseline_arrow_forward_ios_24"
+                    android:drawablePadding="10dp"
+                    android:gravity=""
+                    android:paddingStart="10dp"
+                    android:paddingLeft="10dp"
+                    android:text="Black list"
+                    android:textColor="@color/black" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_gravity="right"
+                    android:background="@android:color/darker_gray" />
+
+                <Button
+                    android:id="@+id/btnPromo"
+                    style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/white"
+                    android:drawableLeft="@drawable/ic_ticket_24"
+                    android:drawableRight="@drawable/baseline_arrow_forward_ios_24"
+                    android:drawablePadding="10dp"
+                    android:gravity=""
+                    android:paddingStart="10dp"
+                    android:paddingLeft="10dp"
+                    android:text="Promotion"
+                    android:textColor="@color/black" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnSetting"
+                style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:backgroundTint="@color/white"
+                android:drawableLeft="@drawable/ic_gear_24"
+                android:drawableRight="@drawable/baseline_arrow_forward_ios_24"
+                android:drawablePadding="10dp"
+                android:gravity=""
+                android:paddingStart="10dp"
+                android:paddingLeft="10dp"
+                android:text="Setting"
+                android:textColor="@color/black" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingBottom="10dp">
+
+                <Button
+                    android:id="@+id/buttonQS"
+                    style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/white"
+                    android:drawableLeft="@drawable/ic_headphone_24"
+                    android:drawableRight="@drawable/baseline_arrow_forward_ios_24"
+                    android:drawablePadding="10dp"
+                    android:gravity=""
+                    android:paddingStart="10dp"
+                    android:paddingLeft="10dp"
+                    android:text="Quick Support"
+                    android:textColor="@color/black" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_gravity="right"
+                    android:background="@android:color/darker_gray" />
+
+                <Button
+                    android:id="@+id/btnIF"
+                    style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/white"
+                    android:drawableLeft="@drawable/ic_friends_24"
+                    android:drawableRight="@drawable/baseline_arrow_forward_ios_24"
+                    android:drawablePadding="10dp"
+                    android:gravity=""
+                    android:paddingStart="10dp"
+                    android:paddingLeft="10dp"
+                    android:text="Invite friends"
+                    android:textColor="@color/black" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_gravity="right"
+                    android:background="@android:color/darker_gray" />
+
+                <Button
+                    android:id="@+id/btnFC"
+                    style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/white"
+                    android:drawableLeft="@drawable/ic_connect_24"
+                    android:drawableRight="@drawable/baseline_arrow_forward_ios_24"
+                    android:drawablePadding="10dp"
+                    android:gravity=""
+                    android:paddingStart="10dp"
+                    android:paddingLeft="10dp"
+                    android:text="FUTA Communication"
+                    android:textColor="@color/black" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/btnDA"
+                    style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/white"
+                    android:drawableLeft="@drawable/ic_bin_24"
+                    android:drawableRight="@drawable/baseline_arrow_forward_ios_24"
+                    android:drawablePadding="10dp"
+                    android:gravity=""
+                    android:paddingStart="10dp"
+                    android:paddingLeft="10dp"
+                    android:text="Delete Account"
+                    android:textColor="@color/black" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_gravity="right"
+                    android:background="@android:color/darker_gray" />
+
+                <Button
+                    android:id="@+id/btnLogout"
+                    style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/white"
+                    android:drawableLeft="@drawable/ic_logout_24"
+                    android:drawableRight="@drawable/baseline_arrow_forward_ios_24"
+                    android:drawablePadding="10dp"
+                    android:gravity=""
+                    android:paddingStart="10dp"
+                    android:paddingLeft="10dp"
+                    android:text="Logout"
+                    android:textColor="@color/black" />
+
+                <ImageView
+                    android:id="@+id/imageView4"
+                    android:layout_width="match_parent"
+                    android:layout_height="110dp"
+                    android:src="@drawable/footer" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</FrameLayout>

@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Do an</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="_0_i_m">0 Điểm</string>
+    <string name="khaitruong">FUTA BUS LINE Tưng Bừng Khai Trương Tuyến BXMD MỚI - BUÔN MA THUỘT.</string>
+    <string name="khaitruong2">Tưng bừng Khai trương tuyến CẦN THƠ - HỒNG NGỤ</string>
+</resources>

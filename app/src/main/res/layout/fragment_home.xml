@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:background="@color/orange"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/imageButton3"
+                android:layout_width="76dp"
+                android:layout_height="119dp"
+                android:background="@color/orange"
+                app:srcCompat="@drawable/baseline_account_circle_24" />
+
+            <TextView
+                android:layout_width="83dp"
+                android:layout_height="119dp"
+                android:gravity="center_vertical"
+                android:text="Xin chào,"
+                android:textColor="@color/white"/>
+
+            <ImageView
+                android:layout_marginLeft="170dp"
+                android:id="@+id/imageView2"
+                android:layout_width="70dp"
+                android:layout_height="119dp"
+                app:srcCompat="@drawable/baseline_help_center_24" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="364dp"
+            android:layout_height="143dp"
+            android:layout_marginTop="-56dp"
+            android:layout_marginBottom="25dp"
+            android:background="@drawable/shadowradius"
+            android:elevation="5dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="344dp"
+                android:layout_height="68dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="172dp"
+                    android:layout_height="51dp"
+                    android:paddingLeft="10dp"
+                    android:text="FUTAPay"
+                    android:paddingTop="5dp"/>
+
+                <TextView
+                    android:layout_width="172dp"
+                    android:layout_height="51dp"
+                    android:text="FUTAPay"
+                    android:textAlignment="textEnd"
+                    android:paddingRight="10dp"
+                    android:paddingTop="5dp"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="344dp"
+                android:layout_height="68dp">
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="118dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="70dp"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/imageButton"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="6dp"
+                    android:background="@drawable/radius"
+                    android:elevation="5dp"
+                    app:srcCompat="@drawable/baseline_airplane_ticket_24" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="3dp"
+                    android:text="Đặt vé xe"
+                    android:textAlignment="center" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="70dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="70dp"
+                android:layout_marginRight="70dp"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/imageButton1"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="6dp"
+                    android:background="@drawable/radius"
+                    android:elevation="5dp"
+                    app:srcCompat="@drawable/baseline_directions_bus_24" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="3dp"
+                    android:text="Xe buýt"
+                    android:textAlignment="center" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="70dp"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/imageButton2"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="6dp"
+                    android:background="@drawable/radius"
+                    android:elevation="5dp"
+                    app:srcCompat="@drawable/baseline_space_dashboard_24" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="3dp"
+                    android:text="Dịch vụ"
+                    android:textAlignment="center" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal">
+
+            <LinearLayout
+                android:layout_width="364dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                >
+
+                <ViewFlipper
+                    android:id="@+id/viewFlipper"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="211dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/img1" />
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="211dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/img2" />
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="211dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/img3" />
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="211dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/img4" />
+                </ViewFlipper>
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
