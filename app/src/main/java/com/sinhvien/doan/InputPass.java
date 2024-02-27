@@ -26,9 +26,15 @@ public class InputPass extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent=new Intent(InputPass.this, Index.class);
                 startActivity(intent);
-
             }
         });
-
+        btnback = findViewById(R.id.textViewBack);
+        btnback.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(InputPass.this, InputNumber.class);
+                startActivity(i);
+            }
+        });
     }
 }

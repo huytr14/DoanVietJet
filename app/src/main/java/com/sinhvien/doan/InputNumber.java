@@ -9,14 +9,14 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity {
+public class InputNumber extends AppCompatActivity {
     Button mbutton;
     EditText mSDT;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_input_number);
 
         mSDT = (EditText) findViewById(R.id.inputPhone);
         mbutton = findViewById(R.id.button);
@@ -27,20 +27,20 @@ public class MainActivity extends AppCompatActivity {
                 {
                     if(mSDT.getText().toString().length()==10)
                     {
-                        Toast.makeText(MainActivity.this, "Đăng nhập thành công" , Toast.LENGTH_SHORT).show();
-                        Intent intent = new Intent(MainActivity.this , InputPass.class);
+                        Toast.makeText(InputNumber.this, "Đăng nhập thành công" , Toast.LENGTH_SHORT).show();
+                        Intent intent = new Intent(InputNumber.this , InputPass.class);
                         startActivity(intent);
                     }
                     else if(mSDT.getText().toString().equals(mSDT)){
-                        Toast.makeText(MainActivity.this,"Sai mật khẩu", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(InputNumber.this,"Sai mật khẩu", Toast.LENGTH_SHORT).show();
                     }
                 }
                 else if(mSDT.getText().length() == 0)
                 {
-                    Toast.makeText(MainActivity.this,"Mời bạn nhập", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(InputNumber.this,"Mời bạn nhập", Toast.LENGTH_SHORT).show();
                 }
                 else if(mSDT.getText().length() != 10){
-                    Toast.makeText(MainActivity.this,"Không phải số điện thoại", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(InputNumber.this,"Không phải số điện thoại", Toast.LENGTH_SHORT).show();
                 }
             }
         });

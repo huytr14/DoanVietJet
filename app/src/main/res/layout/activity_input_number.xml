@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".InputNumber"
+    android:background="@color/white">
 
     <ImageView
         android:id="@+id/imageView"
@@ -21,7 +22,7 @@
         android:id="@+id/textView"
         android:layout_width="262dp"
         android:layout_height="63dp"
-        android:text="Cảm ơn bạn đã đồng hành cùng FUTA"
+        android:text="Thank you for accompanying FUTA Group"
         android:textAlignment="center"
         android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -36,7 +37,7 @@
         android:layout_width="337dp"
         android:layout_height="65dp"
         android:backgroundTint="@color/orange"
-        android:text="Tiếp tục"
+        android:text="Continue"
         android:textColorHint="#FF5722"
         android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -50,7 +51,7 @@
         android:layout_width="331dp"
         android:layout_height="57dp"
         android:ems="10"
-        android:hint=" Nhập số điện thoại"
+        android:hint=" Enter phone number"
         android:drawableLeft="@drawable/baseline_call_24"
         android:outlineAmbientShadowColor="@color/orange"
         android:inputType="phone"
