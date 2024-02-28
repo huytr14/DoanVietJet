@@ -30,6 +30,8 @@
         <activity
             android:name=".InputNumber"
             android:exported="false" />
+        <activity
+            android:name=".TicketBus"
+            android:exported="true" />
     </application>
-
 </manifest>

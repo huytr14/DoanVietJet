@@ -103,7 +103,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginTop="3dp"
-                    android:text="Đặt vé xe"
+                    android:text="FUTA Bus Ticket"
                     android:textAlignment="center" />
             </LinearLayout>
 
@@ -128,7 +128,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginTop="3dp"
-                    android:text="Xe buýt"
+                    android:text="City Bus"
                     android:textAlignment="center" />
             </LinearLayout>
 
@@ -151,7 +151,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginTop="3dp"
-                    android:text="Dịch vụ"
+                    android:text="SHB"
                     android:textAlignment="center" />
             </LinearLayout>
         </LinearLayout>
