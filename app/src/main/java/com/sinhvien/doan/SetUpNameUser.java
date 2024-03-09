@@ -8,22 +8,22 @@ import android.widget.EditText;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class Register extends AppCompatActivity {
+public class SetUpNameUser extends AppCompatActivity {
 
-    EditText medt;
-    Button btncout;
+    EditText nameUser;
+    Button btnNext;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_register);
+        setContentView(R.layout.activity_setname);
 
-        medt = findViewById(R.id.Name);
-        btncout = findViewById(R.id.cout);
-        btncout.setOnClickListener(new View.OnClickListener() {
+        nameUser = findViewById(R.id.Name);
+        btnNext = findViewById(R.id.cout);
+        btnNext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(medt.getText().toString().length() != 0){
-                    Intent i = new Intent(Register.this,InputOTP.class);
+                if(nameUser.getText().toString().length() != 0){
+                    Intent i = new Intent(SetUpNameUser.this,Verify_OTP.class);
                     startActivity(i);
                 }
             }
