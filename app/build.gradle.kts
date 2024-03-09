@@ -9,7 +9,7 @@ android {
     defaultConfig {
         applicationId = "com.sinhvien.doan"
         minSdk = 26
-        targetSdk = 34
+        targetSdk = 30
         versionCode = 1
         versionName = "1.0"
 
@@ -45,4 +45,6 @@ dependencies {
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
     implementation("com.google.android.material:material:1.1.0-alpha2")
+    implementation( "com.journeyapps:zxing-android-embedded:4.3.0")
+
 }
