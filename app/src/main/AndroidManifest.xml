@@ -13,10 +13,13 @@
         android:theme="@style/Theme.DoAn"
         tools:targetApi="31">
         <activity
-            android:name=".Verify_OTP"
-            android:exported="true"
+            android:name=".Verity_OTP"
+            android:exported="false"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustResize"/>
+        <activity
+            android:name=".Register"
+            android:exported="false" />
         <activity
             android:name=".SetUpNameUser"
             android:exported="true" />
@@ -40,13 +43,11 @@
             android:exported="true"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustResize">
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
         <activity
             android:name=".TicketBus"

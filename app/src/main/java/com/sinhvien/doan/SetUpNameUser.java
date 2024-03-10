@@ -17,13 +17,13 @@ public class SetUpNameUser extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_setname);
 
-        nameUser = findViewById(R.id.Name);
-        btnNext = findViewById(R.id.cout);
+        nameUser = findViewById(R.id.inputName);
+        btnNext = findViewById(R.id.button);
         btnNext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if(nameUser.getText().toString().length() != 0){
-                    Intent i = new Intent(SetUpNameUser.this,Verify_OTP.class);
+                    Intent i = new Intent(SetUpNameUser.this,Verity_OTP.class);
                     startActivity(i);
                 }
             }
