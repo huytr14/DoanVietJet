@@ -1,26 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".HistoryFragment">
-    <com.google.android.material.appbar.AppBarLayout
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tab_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
-        <com.google.android.material.tabs.TabLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/tabLayout"
-            android:background="@color/white"
-            app:tabIndicator="@color/black"
-            app:tabIndicatorHeight="2dp"
-            app:tabMode="fixed"
-            app:tabGravity="fill"/>
-    </com.google.android.material.appbar.AppBarLayout>
+        app:tabSelectedTextColor="#F44336" />
     <androidx.viewpager.widget.ViewPager
+        android:id="@+id/view_pager"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/viewPager"/>
-</androidx.coordinatorlayout.widget.CoordinatorLayout>
+        android:layout_height="match_parent"/>
+</LinearLayout>

@@ -11,26 +11,40 @@ import java.util.ArrayList;
 public class ViewPagerAdapter extends FragmentPagerAdapter {
     private final ArrayList<Fragment>fragmentArrayList=new ArrayList<>();
     private final ArrayList<String>fragmentTitle=new ArrayList<>();
-    public ViewPagerAdapter(@NonNull FragmentManager fm){
-        super(fm);
+
+    public ViewPagerAdapter(@NonNull FragmentManager fm, int behavior) {
+        super(fm, behavior);
     }
+
     @NonNull
     @Override
     public Fragment getItem(int position) {
-        return fragmentArrayList.get(position);
+        switch (position){
+            case 0:
+                return new CHistoryFragment();
+            case 1:
+                return new DpFragment();
+            default:
+                return new CHistoryFragment();
+        }
     }
 
     @Override
     public int getCount() {
-        return fragmentArrayList.size();
-    }
-    public void addFragment(Fragment fragment,String title){
-        fragmentArrayList.add(fragment);
-        fragmentTitle.add(title);
+        return 2;
     }
     @Nullable
     @Override
     public CharSequence getPageTitle(int postion){
-        return fragmentTitle.get(postion);
+        String title="";
+        switch (postion){
+            case 0:
+                title="HISTORY";
+                break;
+            case 1:
+                title="DEPARTING SOON";
+                break;
+        }
+        return title;
     }
 }

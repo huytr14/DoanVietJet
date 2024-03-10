@@ -1,0 +1,276 @@
+diff --git a/.idea/deploymentTargetDropDown.xml b/.idea/deploymentTargetDropDown.xml
+index 9fb46ff..0c0c338 100644
+--- a/.idea/deploymentTargetDropDown.xml
++++ b/.idea/deploymentTargetDropDown.xml
+@@ -2,9 +2,6 @@
+ <project version="4">
+   <component name="deploymentTargetDropDown">
+     <value>
+-      <entry key="TicketBus">
+-        <State />
+-      </entry>
+       <entry key="app">
+         <State />
+       </entry>
+diff --git a/app/build.gradle.kts b/app/build.gradle.kts
+index c6cbfca..649f165 100644
+--- a/app/build.gradle.kts
++++ b/app/build.gradle.kts
+@@ -9,7 +9,7 @@ android {
+     defaultConfig {
+         applicationId = "com.sinhvien.doan"
+         minSdk = 26
+-        targetSdk = 34
++        targetSdk = 30
+         versionCode = 1
+         versionName = "1.0"
+ 
+@@ -45,4 +45,6 @@ dependencies {
+     androidTestImplementation("androidx.test.ext:junit:1.1.5")
+     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
+     implementation("com.google.android.material:material:1.1.0-alpha2")
++    implementation( "com.journeyapps:zxing-android-embedded:4.3.0")
++
+ }
+\ No newline at end of file
+diff --git a/app/src/main/AndroidManifest.xml b/app/src/main/AndroidManifest.xml
+index 4d86114..1185d01 100644
+--- a/app/src/main/AndroidManifest.xml
++++ b/app/src/main/AndroidManifest.xml
+@@ -2,6 +2,11 @@
+ <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+     xmlns:tools="http://schemas.android.com/tools">
+ 
++    <uses-feature
++        android:name="android.hardware.camera"
++        android:required="false" />
++    <uses-permission android:name="android.permission.CAMERA"/>
++
+     <application
+         android:allowBackup="true"
+         android:dataExtractionRules="@xml/data_extraction_rules"
+@@ -33,5 +38,9 @@
+         <activity
+             android:name=".TicketBus"
+             android:exported="true" />
++        <activity android:name=".CaptureAct"
++            android:screenOrientation="portrait"
++            android:stateNotNeeded="true"
++            android:theme="@style/zxing_CaptureTheme"/>
+     </application>
+ </manifest>
+\ No newline at end of file
+diff --git a/app/src/main/java/com/sinhvien/doan/HistoryFragment.java b/app/src/main/java/com/sinhvien/doan/HistoryFragment.java
+index c355437..41a70f6 100644
+--- a/app/src/main/java/com/sinhvien/doan/HistoryFragment.java
++++ b/app/src/main/java/com/sinhvien/doan/HistoryFragment.java
+@@ -2,6 +2,9 @@ package com.sinhvien.doan;
+ 
+ import android.os.Bundle;
+ 
++import androidx.activity.result.ActivityResultLauncher;
++import androidx.activity.result.contract.ActivityResultContract;
++import androidx.activity.result.contract.ActivityResultContracts;
+ import androidx.fragment.app.Fragment;
+ import androidx.viewpager.widget.ViewPager;
+ 
+diff --git a/app/src/main/java/com/sinhvien/doan/Index.java b/app/src/main/java/com/sinhvien/doan/Index.java
+index fcfbd1a..2daf548 100644
+--- a/app/src/main/java/com/sinhvien/doan/Index.java
++++ b/app/src/main/java/com/sinhvien/doan/Index.java
+@@ -1,19 +1,27 @@
+ package com.sinhvien.doan;
+ 
++import androidx.activity.result.ActivityResultLauncher;
++import androidx.activity.result.contract.ActivityResultContracts;
+ import androidx.annotation.NonNull;
++import androidx.appcompat.app.AlertDialog;
+ import androidx.appcompat.app.AppCompatActivity;
+ import androidx.fragment.app.Fragment;
+ import androidx.fragment.app.FragmentManager;
+ import androidx.fragment.app.FragmentTransaction;
+ 
+ import android.annotation.SuppressLint;
++import android.content.DialogInterface;
+ import android.os.Bundle;
+ import android.view.MenuItem;
+ import android.widget.FrameLayout;
+ 
+ import com.google.android.material.bottomnavigation.BottomNavigationView;
++import com.google.android.material.floatingactionbutton.FloatingActionButton;
++import com.journeyapps.barcodescanner.ScanContract;
++import com.journeyapps.barcodescanner.ScanOptions;
+ 
+ public class Index extends AppCompatActivity {
++    FloatingActionButton btnScan;
+     BottomNavigationView bottomNavigationView;
+     FrameLayout frameLayout;
+     @Override
+@@ -22,6 +30,10 @@ public class Index extends AppCompatActivity {
+         setContentView(R.layout.activity_index);
+         bottomNavigationView=findViewById(R.id.bottomNavigationView);
+         frameLayout=findViewById(R.id.frameLayout);
++        btnScan=findViewById(R.id.floatingActionButton);
++        btnScan.setOnClickListener(v->{
++            scanCode();
++        });
+ 
+         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+             @Override
+@@ -45,10 +57,31 @@ public class Index extends AppCompatActivity {
+             }
+         });
+     }
++    private void scanCode(){
++        ScanOptions options=new ScanOptions();
++        options.setPrompt("Volume up to flash on");
++        options.setBeepEnabled(true);
++        options.setOrientationLocked(true);
++        options.setCaptureActivity(CaptureAct.class);
++        barLaucher.launch(options);
++    }
+     private void loadFragment(Fragment fragment){
+         FragmentManager fragmentManager=getSupportFragmentManager();
+         FragmentTransaction fragmentTransaction=fragmentManager.beginTransaction();
+         fragmentTransaction.replace(R.id.frameLayout,fragment);
+         fragmentTransaction.commit();
+     }
++    ActivityResultLauncher<ScanOptions>barLaucher=registerForActivityResult(new ScanContract(), result->{
++        if(result.getContents()!=null){
++            AlertDialog.Builder builder=new AlertDialog.Builder(Index.this);
++            builder.setTitle("Result");
++            builder.setMessage(result.getContents());
++            builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
++                @Override
++                public void onClick(DialogInterface dialog, int which) {
++                    dialog.dismiss();
++                }
++            }).show();
++        }
++    });
+ }
+\ No newline at end of file
+diff --git a/app/src/main/java/com/sinhvien/doan/InputNumber.java b/app/src/main/java/com/sinhvien/doan/InputNumber.java
+index 6e1e42e..a1717f5 100644
+--- a/app/src/main/java/com/sinhvien/doan/InputNumber.java
++++ b/app/src/main/java/com/sinhvien/doan/InputNumber.java
+@@ -44,5 +44,12 @@ public class InputNumber extends AppCompatActivity {
+                 }
+             }
+         });
++        Bundle bundle=getIntent().getExtras();
++        if(bundle !=null){
++            if(bundle.getString("some")!=null){
++                Toast.makeText(getApplicationContext(),"data:"+bundle.getString("some"),
++                        Toast.LENGTH_SHORT).show();
++            }
++        }
+     }
+ }
+\ No newline at end of file
+diff --git a/app/src/main/java/com/sinhvien/doan/ProfileFragment.java b/app/src/main/java/com/sinhvien/doan/ProfileFragment.java
+index a006753..7f4acd2 100644
+--- a/app/src/main/java/com/sinhvien/doan/ProfileFragment.java
++++ b/app/src/main/java/com/sinhvien/doan/ProfileFragment.java
+@@ -1,66 +1,58 @@
+ package com.sinhvien.doan;
+ 
++import android.content.DialogInterface;
++import android.content.Intent;
+ import android.os.Bundle;
+ 
++import androidx.appcompat.app.AlertDialog;
+ import androidx.fragment.app.Fragment;
+ 
+ import android.view.LayoutInflater;
+ import android.view.View;
+ import android.view.ViewGroup;
++import android.widget.Button;
+ 
+-/**
+- * A simple {@link Fragment} subclass.
+- * Use the {@link ProfileFragment#newInstance} factory method to
+- * create an instance of this fragment.
+- */
+ public class ProfileFragment extends Fragment {
+-
+-    // TODO: Rename parameter arguments, choose names that match
+-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
+-    private static final String ARG_PARAM1 = "param1";
+-    private static final String ARG_PARAM2 = "param2";
+-
+-    // TODO: Rename and change types of parameters
+-    private String mParam1;
+-    private String mParam2;
+-
+-    public ProfileFragment() {
+-        // Required empty public constructor
+-    }
+-
+-    /**
+-     * Use this factory method to create a new instance of
+-     * this fragment using the provided parameters.
+-     *
+-     * @param param1 Parameter 1.
+-     * @param param2 Parameter 2.
+-     * @return A new instance of fragment ProfileFragment.
+-     */
+-    // TODO: Rename and change types and number of parameters
+-    public static ProfileFragment newInstance(String param1, String param2) {
+-        ProfileFragment fragment = new ProfileFragment();
+-        Bundle args = new Bundle();
+-        args.putString(ARG_PARAM1, param1);
+-        args.putString(ARG_PARAM2, param2);
+-        fragment.setArguments(args);
+-        return fragment;
+-    }
+-
+     @Override
+     public void onCreate(Bundle savedInstanceState) {
+         super.onCreate(savedInstanceState);
+-        if (getArguments() != null) {
+-            mParam1 = getArguments().getString(ARG_PARAM1);
+-            mParam2 = getArguments().getString(ARG_PARAM2);
+-        }
++
+     }
+ 
+     @Override
+     public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                              Bundle savedInstanceState) {
++        View view=inflater.inflate(R.layout.fragment_profile,container,false);
++        Button btnLogout=(Button) view.findViewById(R.id.btnLogout);
++        btnLogout.setOnClickListener(new View.OnClickListener() {
++            @Override
++            public void onClick(View v) {
++                logout();
++            }
++        });
+ 
+         // Inflate the layout for this fragment
+-        return inflater.inflate(R.layout.fragment_profile, container, false);
++        return view;
++    }
++    private void logout(){
++        AlertDialog.Builder builder=new AlertDialog.Builder(getActivity());
++        builder.setTitle("Logout");
++        builder.setMessage("Do you really want to log out");
++        builder.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
++            @Override
++            public void onClick(DialogInterface dialog, int which) {
++                Intent intent=new Intent(getActivity(),InputNumber.class);
++                intent.putExtra("some","somedata");
++                startActivity(intent);
++            }
++        });
++        builder.setNegativeButton("Close", new DialogInterface.OnClickListener() {
++            @Override
++            public void onClick(DialogInterface dialog, int which) {
++                dialog.dismiss();
++            }
++        });
++        builder.show();
+     }
+ 
+ }
+\ No newline at end of file
