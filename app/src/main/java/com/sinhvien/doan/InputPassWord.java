@@ -32,7 +32,7 @@ public class InputPassWord extends AppCompatActivity {
         btnback.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(InputPassWord.this, InputNumberPhone.class);
+                Intent i = new Intent(InputPassWord.this, LoginWithNumber.class);
                 startActivity(i);
             }
         });

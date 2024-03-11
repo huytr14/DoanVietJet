@@ -5,6 +5,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ProgressBar;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -16,45 +18,59 @@ import com.google.firebase.auth.PhoneAuthProvider;
 
 import java.util.concurrent.TimeUnit;
 
-public class InputNumberPhone extends AppCompatActivity {
+public class LoginWithNumber extends AppCompatActivity {
     EditText SDT;
     Button mbutton;
+    TextView loginwithemail;
+    ProgressBar progressBar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_input_number);
 
-        SDT = (EditText) findViewById(R.id.inputPhone);
+        SDT = findViewById(R.id.inputPhone);
         mbutton = findViewById(R.id.buttonCout);
+        progressBar = findViewById(R.id.progressBar);
+        loginwithemail = findViewById(R.id.loginwithemail);
+        loginwithemail.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(LoginWithNumber.this,LoginWithEmail.class);
+                startActivity(i);
+            }
+        });
         mbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if (SDT.getText().toString().trim().isEmpty()){
-                    Toast.makeText(InputNumberPhone.this,"enter phone",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(LoginWithNumber.this,"enter phone",Toast.LENGTH_SHORT).show();
                     return;
                 }
+                progressBar.setVisibility(View.VISIBLE);
                 mbutton.setVisibility(View.INVISIBLE);
                 PhoneAuthProvider.getInstance().verifyPhoneNumber("+84" + SDT.getText().toString(),
                         60,
                         TimeUnit.SECONDS,
-                        InputNumberPhone.this,
-                        new PhoneAuthProvider.OnVerificationStateChangedCallbacks(){
-
+                        LoginWithNumber.this,
+                        new PhoneAuthProvider.OnVerificationStateChangedCallbacks() {
                             @Override
                             public void onVerificationCompleted(@NonNull PhoneAuthCredential phoneAuthCredential) {
-                                mbutton.setVisibility(View.INVISIBLE);
+                                progressBar.setVisibility(View.GONE);
+                                mbutton.setVisibility(View.VISIBLE);
                             }
-
                             @Override
                             public void onVerificationFailed(@NonNull FirebaseException e) {
-                                mbutton.setVisibility(View.INVISIBLE);
+                                progressBar.setVisibility(View.GONE);
+                                mbutton.setVisibility(View.VISIBLE);
+                                Toast.makeText(LoginWithNumber.this,"Failed",Toast.LENGTH_SHORT).show();
                             }
-
                             @Override
                             public void onCodeSent(@NonNull String verificationId, @NonNull PhoneAuthProvider.ForceResendingToken forceResendingToken) {
-                                super.onCodeSent(verificationId, forceResendingToken);
-                                mbutton.setVisibility(View.INVISIBLE);
-                                Intent intent = new Intent(getApplicationContext(), SetUpNameUser.class);
+                                progressBar.setVisibility(View.GONE);
+                                mbutton.setVisibility(View.VISIBLE);
+
+                                Intent intent = new  Intent(getApplicationContext(),Verity_OTP.class);
+                                intent.putExtra("verificationId", verificationId);
                                 startActivity(intent);
                             }
                         });

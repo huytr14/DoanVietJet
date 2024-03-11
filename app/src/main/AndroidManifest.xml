@@ -13,13 +13,16 @@
         android:theme="@style/Theme.DoAn"
         tools:targetApi="31">
         <activity
-            android:name=".Verity_OTP"
-            android:exported="false"
-            android:screenOrientation="portrait"
-            android:windowSoftInputMode="adjustResize"/>
+            android:name=".LoginWithEmail"
+            android:exported="true" />
         <activity
-            android:name=".Register"
-            android:exported="false" />
+            android:name=".RegisterWithEmail"
+            android:exported="true" />
+        <activity
+            android:name=".Verity_OTP"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
         <activity
             android:name=".SetUpNameUser"
             android:exported="true" />
@@ -39,7 +42,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".InputNumberPhone"
+            android:name=".LoginWithNumber"
             android:exported="true"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustResize">

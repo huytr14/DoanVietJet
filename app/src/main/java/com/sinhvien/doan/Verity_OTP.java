@@ -1,14 +1,18 @@
 package com.sinhvien.doan;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 public class Verity_OTP extends AppCompatActivity {
     EditText Code1, Code2, Code3, Code4, Code5, Code6;
+    Button btn;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,6 +26,15 @@ public class Verity_OTP extends AppCompatActivity {
         Code6 = findViewById(R.id.Code6);
 
         setupOTP();
+        btn = (Button) findViewById(R.id.btnCreate);
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(Verity_OTP.this, HomeFragment.class);
+                startActivity(i);
+            }
+        });
+
     }
     private void setupOTP(){
         Code1.addTextChangedListener(new TextWatcher() {
