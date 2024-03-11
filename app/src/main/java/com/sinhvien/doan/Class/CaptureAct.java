@@ -1,4 +1,4 @@
-package com.sinhvien.doan;
+package com.sinhvien.doan.Class;
 
 import com.journeyapps.barcodescanner.CaptureActivity;
 

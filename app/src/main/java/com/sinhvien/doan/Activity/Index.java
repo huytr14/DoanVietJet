@@ -1,7 +1,6 @@
-package com.sinhvien.doan;
+package com.sinhvien.doan.Activity;
 
 import androidx.activity.result.ActivityResultLauncher;
-import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
@@ -9,7 +8,6 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
-import android.annotation.SuppressLint;
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -19,6 +17,12 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.journeyapps.barcodescanner.ScanContract;
 import com.journeyapps.barcodescanner.ScanOptions;
+import com.sinhvien.doan.Class.CaptureAct;
+import com.sinhvien.doan.FragmentParents.HistoryFragment;
+import com.sinhvien.doan.FragmentParents.HomeFragment;
+import com.sinhvien.doan.FragmentParents.NotificationFragment;
+import com.sinhvien.doan.FragmentParents.ProfileFragment;
+import com.sinhvien.doan.R;
 
 public class Index extends AppCompatActivity {
     FloatingActionButton btnScan;

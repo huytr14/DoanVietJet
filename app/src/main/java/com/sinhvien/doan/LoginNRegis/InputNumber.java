@@ -1,4 +1,4 @@
-package com.sinhvien.doan;
+package com.sinhvien.doan.LoginNRegis;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -8,6 +8,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import com.sinhvien.doan.R;
 
 public class InputNumber extends AppCompatActivity {
     Button mbutton;
@@ -19,7 +21,7 @@ public class InputNumber extends AppCompatActivity {
         setContentView(R.layout.activity_input_number);
 
         mSDT = (EditText) findViewById(R.id.inputPhone);
-        mbutton = findViewById(R.id.button);
+        mbutton = findViewById(R.id.buttonCout);
         mbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -28,7 +30,7 @@ public class InputNumber extends AppCompatActivity {
                     if(mSDT.getText().toString().length()==10)
                     {
                         Toast.makeText(InputNumber.this, "Đăng nhập thành công" , Toast.LENGTH_SHORT).show();
-                        Intent intent = new Intent(InputNumber.this , InputPass.class);
+                        Intent intent = new Intent(InputNumber.this , InputPassWord.class);
                         startActivity(intent);
                     }
                     else if(mSDT.getText().toString().equals(mSDT)){

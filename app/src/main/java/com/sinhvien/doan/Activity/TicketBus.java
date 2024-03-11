@@ -1,8 +1,10 @@
-package com.sinhvien.doan;
+package com.sinhvien.doan.Activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.sinhvien.doan.R;
 
 public class TicketBus extends AppCompatActivity {
 

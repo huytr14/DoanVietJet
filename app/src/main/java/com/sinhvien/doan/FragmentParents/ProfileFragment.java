@@ -1,4 +1,4 @@
-package com.sinhvien.doan;
+package com.sinhvien.doan.FragmentParents;
 
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -11,6 +11,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+
+import com.sinhvien.doan.LoginNRegis.InputNumber;
+import com.sinhvien.doan.R;
 
 public class ProfileFragment extends Fragment {
     @Override
@@ -41,7 +44,7 @@ public class ProfileFragment extends Fragment {
         builder.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-                Intent intent=new Intent(getActivity(),InputNumber.class);
+                Intent intent=new Intent(getActivity(), InputNumber.class);
                 intent.putExtra("some","somedata");
                 startActivity(intent);
             }

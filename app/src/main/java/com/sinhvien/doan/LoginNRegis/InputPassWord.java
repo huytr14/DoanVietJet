@@ -1,6 +1,4 @@
-package com.sinhvien.doan;
-
-import androidx.appcompat.app.AppCompatActivity;
+package com.sinhvien.doan.LoginNRegis;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,7 +7,12 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-public class InputPass extends AppCompatActivity {
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.sinhvien.doan.Activity.Index;
+import com.sinhvien.doan.R;
+
+public class InputPassWord extends AppCompatActivity {
 
     Button mbtnDN ;
     EditText mMK;
@@ -24,7 +27,7 @@ public class InputPass extends AppCompatActivity {
         mbtnDN.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(InputPass.this, Index.class);
+                Intent intent=new Intent(InputPassWord.this, Index.class);
                 startActivity(intent);
             }
         });
@@ -32,7 +35,7 @@ public class InputPass extends AppCompatActivity {
         btnback.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(InputPass.this, InputNumber.class);
+                Intent i = new Intent(InputPassWord.this, LoginWithNumber.class);
                 startActivity(i);
             }
         });

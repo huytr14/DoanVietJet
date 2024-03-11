@@ -18,13 +18,27 @@
         android:theme="@style/Theme.DoAn"
         tools:targetApi="31">
         <activity
-            android:name=".InputPass"
+            android:name=".LoginNRegis.LoginWithEmail"
+            android:exported="true" />
+        <activity
+            android:name=".LoginNRegis.RegisterWithEmail"
+            android:exported="true" />
+        <activity
+            android:name=".LoginNRegis.Verity_OTP"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".Activity.SetUpNameUser"
+            android:exported="true" />
+        <activity
+            android:name=".LoginNRegis.InputPassWord"
             android:exported="false" />
         <activity
-            android:name=".Index"
+            android:name=".Activity.Index"
             android:exported="false" />
         <activity
-            android:name=".SplashActivity"
+            android:name=".Activity.SplashActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -33,14 +47,23 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".InputNumber"
-            android:exported="false" />
+            android:name=".LoginNRegis.LoginWithNumber"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
-            android:name=".TicketBus"
+            android:name=".Activity.TicketBus"
             android:exported="true" />
-        <activity android:name=".CaptureAct"
+        <activity android:name=".Class.CaptureAct"
             android:screenOrientation="portrait"
             android:stateNotNeeded="true"
             android:theme="@style/zxing_CaptureTheme"/>
     </application>
+
 </manifest>

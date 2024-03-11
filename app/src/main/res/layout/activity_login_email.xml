@@ -58,13 +58,13 @@
                 android:layout_height="wrap_content"
                 android:drawableLeft="@drawable/baseline_call_24"/>
             <EditText
-                android:id="@+id/inputPhone"
+                android:id="@+id/inputEmail"
                 android:layout_width="331dp"
                 android:layout_height="57dp"
                 android:ems="10"
-                android:hint="Enter phone number"
+                android:hint="Enter your email"
                 android:outlineAmbientShadowColor="@color/orange"
-                android:inputType="phone"
+                android:inputType="textEmailAddress"
                 android:singleLine="true"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -74,30 +74,48 @@
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp">
-
+            android:layout_marginTop="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.536"
+            android:gravity="center">
             <TextView
-                android:id="@+id/loginwithemail"
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:text="Login with Email" />
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/baseline_call_24"/>
+            <EditText
+                android:id="@+id/inputPassword"
+                android:layout_width="331dp"
+                android:layout_height="57dp"
+                android:ems="10"
+                android:hint="Enter your password"
+                android:outlineAmbientShadowColor="@color/orange"
+                android:inputType="textPassword"
+                android:singleLine="true"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
         </LinearLayout>
 
         <FrameLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="200dp"
+            android:layout_marginTop="150dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.869">
             <Button
-                android:id="@+id/buttonCout"
+                android:id="@+id/btnContinue"
                 android:layout_width="337dp"
                 android:layout_height="65dp"
                 android:backgroundTint="@color/orange"
-                android:text="Coutinue"
+                android:text="Continue"
                 android:textColorHint="#FF5722"
                 android:textSize="20dp"
                 app:layout_constraintBottom_toBottomOf="parent"

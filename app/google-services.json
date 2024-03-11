@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "382544241063",
+    "project_id": "otp-verify-238db",
+    "storage_bucket": "otp-verify-238db.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:382544241063:android:9e2b72d4f9e7aaf8061682",
+        "android_client_info": {
+          "package_name": "com.sinhvien.doan"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA_ECjiP45IZkAq5B1N2ydpNgSUCBq-rZ4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

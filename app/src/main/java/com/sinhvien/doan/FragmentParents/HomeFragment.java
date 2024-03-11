@@ -1,4 +1,4 @@
-package com.sinhvien.doan;
+package com.sinhvien.doan.FragmentParents;
 
 import android.os.Bundle;
 
@@ -8,6 +8,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ViewFlipper;
+
+import com.sinhvien.doan.R;
 
 
 public class HomeFragment extends Fragment {
