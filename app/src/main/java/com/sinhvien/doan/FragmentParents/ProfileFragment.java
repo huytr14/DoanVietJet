@@ -12,7 +12,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
-import com.sinhvien.doan.LoginNRegis.InputNumber;
+import com.google.firebase.auth.FirebaseAuth;
+import com.sinhvien.doan.LoginNRegis.LoginWithEmail;
 import com.sinhvien.doan.R;
 
 public class ProfileFragment extends Fragment {
@@ -44,7 +45,8 @@ public class ProfileFragment extends Fragment {
         builder.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-                Intent intent=new Intent(getActivity(), InputNumber.class);
+                FirebaseAuth.getInstance().signOut();
+                Intent intent=new Intent(getActivity(), LoginWithEmail.class);
                 intent.putExtra("some","somedata");
                 startActivity(intent);
             }

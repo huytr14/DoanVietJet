@@ -1,4 +1,4 @@
-package com.sinhvien.doan.Activity;
+package com.sinhvien.doan.LoginNRegis;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,7 +8,7 @@ import android.widget.EditText;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.sinhvien.doan.LoginNRegis.Verity_OTP;
+import com.sinhvien.doan.Activity.Index;
 import com.sinhvien.doan.R;
 
 public class SetUpNameUser extends AppCompatActivity {
@@ -26,7 +26,7 @@ public class SetUpNameUser extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if(nameUser.getText().toString().length() != 0){
-                    Intent i = new Intent(SetUpNameUser.this, Verity_OTP.class);
+                    Intent i = new Intent(SetUpNameUser.this, Index.class);
                     startActivity(i);
                 }
             }
