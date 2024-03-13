@@ -65,7 +65,7 @@
                 android:ems="10"
                 android:hint="Enter your name"
                 android:outlineAmbientShadowColor="@color/orange"
-                android:inputType="textEmailAddress"
+                android:inputType="textPersonName"
                 android:singleLine="true"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"

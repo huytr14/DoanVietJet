@@ -93,12 +93,24 @@
                 android:ems="10"
                 android:hint="Enter your password"
                 android:outlineAmbientShadowColor="@color/orange"
-                android:inputType="textVisiblePassword"
+                android:inputType="textPassword"
                 android:singleLine="true"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+            <TextView
+                android:id="@+id/backtoLogin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15dp"
+                android:textColor="@color/Red"
+                android:text="Back to login"/>
         </LinearLayout>
 
         <FrameLayout
@@ -129,7 +141,6 @@
                 android:layout_gravity="center"
                 android:visibility="gone"/>
         </FrameLayout>
-
     </LinearLayout>
 
 </ScrollView>

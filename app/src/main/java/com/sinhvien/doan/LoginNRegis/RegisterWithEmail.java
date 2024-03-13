@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -24,6 +25,7 @@ public class RegisterWithEmail extends AppCompatActivity {
     Button btnContinue;
     FirebaseAuth firebase;
     ProgressBar progressBar;
+    TextView back;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,6 +35,14 @@ public class RegisterWithEmail extends AppCompatActivity {
         inputPassword = findViewById(R.id.inputPassword);
         firebase = FirebaseAuth.getInstance();
         progressBar = findViewById(R.id.progressBar);
+        back = findViewById(R.id.backtoLogin);
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getApplicationContext(),LoginWithEmail.class);
+                startActivity(i);
+            }
+        });
         btnContinue = findViewById(R.id.btnCont);
         btnContinue.setOnClickListener(new View.OnClickListener() {
             @Override
