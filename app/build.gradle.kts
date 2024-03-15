@@ -10,7 +10,6 @@ android {
     defaultConfig {
         applicationId = "com.sinhvien.doan"
         minSdk = 26
-        targetSdk = 30
         versionCode = 1
         versionName = "1.0"
 
