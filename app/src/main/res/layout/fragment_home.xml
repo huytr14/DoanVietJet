@@ -53,14 +53,14 @@
                     android:layout_height="51dp"
                     android:paddingLeft="10dp"
                     android:paddingTop="5dp"
-                    android:text="VietJetPay" />
+                    android:text="VietJetAir" />
 
                 <TextView
                     android:layout_width="172dp"
                     android:layout_height="51dp"
                     android:paddingTop="5dp"
                     android:paddingRight="10dp"
-                    android:text="VietJetPay"
+                    android:text="VietJetAir"
                     android:textAlignment="textEnd" />
             </LinearLayout>
 
@@ -82,7 +82,7 @@
                 android:layout_height="match_parent"
                 android:gravity="center_horizontal"
                 android:orientation="vertical"
-                android:layout_marginRight="70dp">
+                android:layout_marginRight="100dp">
 
                 <ImageButton
                     android:id="@+id/imageButton"
@@ -100,6 +100,8 @@
                     android:text="Ticket"
                     android:textAlignment="center" />
             </LinearLayout>
+
+
 
             <LinearLayout
                 android:layout_width="70dp"

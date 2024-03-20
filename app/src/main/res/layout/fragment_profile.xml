@@ -224,7 +224,7 @@
                     android:gravity=""
                     android:paddingStart="10dp"
                     android:paddingLeft="10dp"
-                    android:text="FUTA Communication"
+                    android:text="VietJet Communication"
                     android:textColor="@color/black" />
             </LinearLayout>
 
@@ -272,8 +272,11 @@
                 <ImageView
                     android:id="@+id/imageView4"
                     android:layout_width="match_parent"
-                    android:layout_height="110dp"
+                    android:layout_height="250dp"
                     android:src="@drawable/footer" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"/>
 
             </LinearLayout>
 

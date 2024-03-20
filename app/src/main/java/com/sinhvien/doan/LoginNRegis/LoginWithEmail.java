@@ -9,6 +9,7 @@ import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
+import com.sinhvien.doan.FragmentParents.HomeFragment;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -19,7 +20,6 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.sinhvien.doan.Activity.Index;
-import com.sinhvien.doan.FragmentParents.HomeFragment;
 import com.sinhvien.doan.R;
 
 public class LoginWithEmail extends AppCompatActivity {
