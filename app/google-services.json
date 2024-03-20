@@ -1,13 +1,13 @@
 {
   "project_info": {
-    "project_number": "300058343239",
-    "project_id": "loginnregister-84a5f",
-    "storage_bucket": "loginnregister-84a5f.appspot.com"
+    "project_number": "562580008442",
+    "project_id": "vietjet-abe40",
+    "storage_bucket": "vietjet-abe40.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:300058343239:android:6e91c3aac46f0e4f7abe62",
+        "mobilesdk_app_id": "1:562580008442:android:ce1833f0f7c94d2d46c843",
         "android_client_info": {
           "package_name": "com.sinhvien.doan"
         }
@@ -15,7 +15,7 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyBtv3foBLtvClcEqpoBSXqDR2V3saooTCw"
+          "current_key": "AIzaSyCw64QgBojce-g7H45uWIbpxBO_6JuxPF4"
         }
       ],
       "services": {
