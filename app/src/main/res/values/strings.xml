@@ -8,4 +8,21 @@
     <string name="SetName">What is your name?</string>
     <string name="SetName2">Please share for FUTA to serve you better</string>
     <string name="Password"></string>
+    <string name="head1">Để có chuyến bay tốt đẹp</string>
+    <string name="head2">Mua hành lý, suất ăn, chọn chỗ ngồi và hơn thế nữa....</string>
+    <string name="head3">Dịch vụ cao cấp</string>
+    <string name="head4">Về Vietjet</string>
+    <string name="head5">Mua vé ở đâu?</string>
+    <string name="head6">Thẻ tín dụng HDBank Vietjet</string>
+    <string name="head7">Câu hỏi thường gặp</string>
+    <string name="head8">Nhà đầu tư</string>
+    <string name="head9">Cơ hội nghề nghiệp</string>
+    <string name="head10">Chính sách về quyền riêng tư</string>
+    <string name="choose">Choose your Gender</string>
+    <string-array name="languages">
+        <item>Male</item>
+        <item>Female</item>
+    </string-array>
+
+
 </resources>

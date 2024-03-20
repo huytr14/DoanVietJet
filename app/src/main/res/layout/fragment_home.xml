@@ -53,14 +53,14 @@
                     android:layout_height="51dp"
                     android:paddingLeft="10dp"
                     android:paddingTop="5dp"
-                    android:text="FUTAPay" />
+                    android:text="VietJetPay" />
 
                 <TextView
                     android:layout_width="172dp"
                     android:layout_height="51dp"
                     android:paddingTop="5dp"
                     android:paddingRight="10dp"
-                    android:text="FUTAPay"
+                    android:text="VietJetPay"
                     android:textAlignment="textEnd" />
             </LinearLayout>
 
@@ -81,7 +81,8 @@
                 android:layout_width="70dp"
                 android:layout_height="match_parent"
                 android:gravity="center_horizontal"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:layout_marginRight="70dp">
 
                 <ImageButton
                     android:id="@+id/imageButton"
@@ -96,32 +97,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginTop="3dp"
-                    android:text="FUTA Bus Ticket"
-                    android:textAlignment="center" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="70dp"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="70dp"
-                android:layout_marginRight="70dp"
-                android:gravity="center_horizontal"
-                android:orientation="vertical">
-
-                <ImageButton
-                    android:id="@+id/imageButton1"
-                    android:layout_width="60dp"
-                    android:layout_height="60dp"
-                    android:layout_marginTop="6dp"
-                    android:background="@drawable/radius"
-                    android:elevation="5dp"
-                    app:srcCompat="@drawable/baseline_directions_bus_24" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginTop="3dp"
-                    android:text="City Bus"
+                    android:text="Ticket"
                     android:textAlignment="center" />
             </LinearLayout>
 
@@ -144,7 +120,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginTop="3dp"
-                    android:text="SHB"
+                    android:text="HD Bank"
                     android:textAlignment="center" />
             </LinearLayout>
         </LinearLayout>

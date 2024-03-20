@@ -27,13 +27,14 @@ import com.sinhvien.doan.R;
 public class Index extends AppCompatActivity {
     FloatingActionButton btnScan;
     BottomNavigationView bottomNavigationView;
-    FrameLayout frameLayout;
+    FrameLayout frameLayout,frameLayout2;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_index);
         bottomNavigationView=findViewById(R.id.bottomNavigationView);
         frameLayout=findViewById(R.id.frameLayout);
+        frameLayout2=findViewById(R.id.frameLayout2);
         btnScan=findViewById(R.id.floatingActionButton);
         btnScan.setOnClickListener(v->{
             scanCode();
@@ -72,7 +73,7 @@ public class Index extends AppCompatActivity {
     private void loadFragment(Fragment fragment){
         FragmentManager fragmentManager=getSupportFragmentManager();
         FragmentTransaction fragmentTransaction=fragmentManager.beginTransaction();
-        fragmentTransaction.replace(R.id.frameLayout,fragment);
+        fragmentTransaction.replace(R.id.frameLayout, fragment);
         fragmentTransaction.commit();
     }
     ActivityResultLauncher<ScanOptions>barLaucher=registerForActivityResult(new ScanContract(), result->{

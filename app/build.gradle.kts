@@ -47,6 +47,6 @@ dependencies {
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
     implementation("com.google.android.material:material:1.1.0-alpha2")
     implementation( "com.journeyapps:zxing-android-embedded:4.3.0")
-
+    implementation ("de.hdodenhof:circleimageview:3.1.0")
 
 }

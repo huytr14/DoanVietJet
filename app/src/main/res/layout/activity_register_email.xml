@@ -31,7 +31,7 @@
                 android:id="@+id/textView"
                 android:layout_width="262dp"
                 android:layout_height="63dp"
-                android:text="Thank you for accompanying FUTA Group"
+                android:text="Thank you for accompanying VietJet Group"
                 android:textAlignment="center"
                 android:textSize="20dp"
                 app:layout_constraintBottom_toBottomOf="parent"
