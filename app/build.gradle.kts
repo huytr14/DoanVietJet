@@ -48,5 +48,6 @@ dependencies {
     implementation("com.google.android.material:material:1.1.0-alpha2")
     implementation( "com.journeyapps:zxing-android-embedded:4.3.0")
     implementation ("de.hdodenhof:circleimageview:3.1.0")
-
+    implementation ("com.google.firebase:firebase-analytics:17.2.1")
+    implementation ("com.google.firebase:firebase-database:19.2.0")
 }

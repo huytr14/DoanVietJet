@@ -31,6 +31,8 @@ public class UserProfileActivity extends AppCompatActivity {
         btnUP.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                String n=getIntent().getStringExtra("phonenumber");
+                tvPN.setText(n);
                 Intent intent = new Intent(UserProfileActivity.this, UpdateProfileActivity.class);
                 startActivity(intent);
             }
