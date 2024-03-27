@@ -9,6 +9,8 @@ import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.sinhvien.doan.Admin.IndexAdmin;
 import com.sinhvien.doan.FragmentParents.HomeFragment;
 
 import androidx.annotation.NonNull;
@@ -80,19 +82,25 @@ public class LoginWithEmail extends AppCompatActivity {
                         .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                             @Override
                             public void onComplete(@NonNull Task<AuthResult> task) {
-                                if (task.isSuccessful()) {
-                                    progressBar.setVisibility(View.GONE);
-                                    btnContinue.setVisibility(View.VISIBLE);
-                                    Toast.makeText(LoginWithEmail.this,"Login successful",Toast.LENGTH_SHORT).show();
-                                    Intent intent = new Intent(LoginWithEmail.this, Index.class);
-                                    startActivity(intent);
-                                    finish();
-                                } else {
-                                    progressBar.setVisibility(View.GONE);
-                                    btnContinue.setVisibility(View.VISIBLE);
-                                    // If sign in fails, display a message to the user.
-                                    Toast.makeText(LoginWithEmail.this, "Login failed", Toast.LENGTH_SHORT).show();
+                                if(inputEmail.getText().toString().equals("admin123")&&inputPassword.getText().toString().equals("toilatamngu")){
+                                    Intent a=new Intent(LoginWithEmail.this, IndexAdmin.class);
+                                    startActivity(a);
+                                }else {
+                                    if (task.isSuccessful()) {
+                                        progressBar.setVisibility(View.GONE);
+                                        btnContinue.setVisibility(View.VISIBLE);
+                                        Toast.makeText(LoginWithEmail.this,"Login successful",Toast.LENGTH_SHORT).show();
+                                        Intent intent = new Intent(LoginWithEmail.this, Index.class);
+                                        startActivity(intent);
+                                        finish();
+                                    } else {
+                                        progressBar.setVisibility(View.GONE);
+                                        btnContinue.setVisibility(View.VISIBLE);
+                                        // If sign in fails, display a message to the user.
+                                        Toast.makeText(LoginWithEmail.this, "Login failed", Toast.LENGTH_SHORT).show();
+                                    }
                                 }
+
                             }
                         });
             }

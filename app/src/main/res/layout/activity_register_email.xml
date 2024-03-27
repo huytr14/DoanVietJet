@@ -58,7 +58,7 @@
                 android:layout_height="wrap_content"
                 android:drawableLeft="@drawable/baseline_call_24"/>
             <EditText
-                android:id="@+id/inputEmail"
+                android:id="@+id/inputEmailRe"
                 android:layout_width="331dp"
                 android:layout_height="57dp"
                 android:ems="10"

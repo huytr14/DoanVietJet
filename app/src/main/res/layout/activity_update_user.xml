@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Admin.ManagerProfileUser.UpdateUser">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+        <LinearLayout
+            android:id="@+id/imageUserProfile"
+            android:layout_width="match_parent"
+            android:layout_height="99dp"
+            android:background="@color/orange"
+            android:gravity="center">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="30sp"
+                android:textColor="@color/white"
+                android:text="Add User"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <ImageView
+                android:id="@+id/imageView10"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                app:srcCompat="@drawable/account_orange" />
+
+            <View
+                android:id="@+id/view3"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_gravity="right"
+                android:background="@android:color/black"
+                tools:ignore="MissingConstraints" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_gravity="right"
+                android:background="@android:color/black"
+                tools:ignore="MissingConstraints" />
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+            <TextView
+                android:id="@+id/tvPhoneNumber3"
+                android:layout_width="125dp"
+                android:layout_height="60dp"
+                android:paddingLeft="10dp"
+                android:paddingTop="15dp"
+                android:text="Phone" />
+
+            <EditText
+                android:id="@+id/edtPhone"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:hint="Input your Phone"
+                android:paddingStart="10dp"
+                android:paddingBottom="14dp"
+                android:paddingLeft="10dp"
+                android:paddingTop="15dp"
+                android:singleLine="true"
+                android:background="@null"/>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+            <TextView
+                android:id="@+id/tvFullName3"
+                android:layout_width="125dp"
+                android:layout_height="60dp"
+                android:text="Full name"
+                android:paddingLeft="10dp"
+                android:paddingTop="15dp"/>
+
+            <EditText
+                android:id="@+id/edtFullName"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="@null"
+                android:hint="Input your FullName"
+                android:paddingStart="10dp"
+                android:paddingBottom="14dp"
+                android:paddingLeft="10dp"
+                android:singleLine="true"
+                android:paddingTop="15dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+            <TextView
+                android:id="@+id/tvEmail3"
+                android:layout_width="125dp"
+                android:layout_height="60dp"
+                android:text="Email"
+                android:paddingLeft="10dp"
+                android:paddingTop="15dp" />
+
+            <EditText
+                android:id="@+id/edtEmail"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:hint="Inptut your Email"
+                android:paddingStart="10dp"
+                android:paddingBottom="14dp"
+                android:background="@null"
+                android:paddingLeft="10dp"
+                android:singleLine="true"
+                android:paddingTop="15dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+            <TextView
+                android:id="@+id/tvBirthday3"
+                android:layout_width="125dp"
+                android:layout_height="60dp"
+                android:text="BirthDay"
+                android:paddingLeft="10dp"
+                android:paddingTop="15dp" />
+
+            <EditText
+                android:id="@+id/edtBirthday"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:hint="Input your Birthday"
+                android:inputType="date"
+                android:paddingStart="10dp"
+                android:paddingBottom="14dp"
+                android:singleLine="true"
+                android:background="@null"
+                android:paddingLeft="10dp"
+                android:paddingTop="15dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+            <TextView
+                android:id="@+id/tvProfession3"
+                android:layout_width="125dp"
+                android:layout_height="60dp"
+                android:text="Profession"
+                android:paddingLeft="10dp"
+                android:paddingTop="15dp" />
+
+            <EditText
+                android:id="@+id/edtProfession"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="@null"
+                android:paddingLeft="10dp"
+                android:hint="Inptut your Pro"
+                android:singleLine="true"
+                android:paddingStart="10dp"
+                android:paddingBottom="14dp"
+                android:paddingTop="15dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+            <TextView
+                android:id="@+id/tvGender4"
+                android:layout_width="125dp"
+                android:layout_height="60dp"
+                android:text="Gender"
+                android:paddingLeft="10dp"
+                android:paddingTop="15dp" />
+            <Spinner
+                android:id="@+id/spinner"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:paddingStart="8dp" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/addnew"
+            style="@style/Button.White"
+            android:layout_width="270dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="30dp"
+            android:backgroundTint="@color/orange"
+            android:text="ADD TO LIST"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+</ScrollView>

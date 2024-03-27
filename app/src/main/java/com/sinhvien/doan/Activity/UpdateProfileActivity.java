@@ -48,18 +48,21 @@ public class UpdateProfileActivity extends AppCompatActivity {
         btnUpdate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String phonenumber=edtPN.getText().toString();
-                String fullname=edtFN.getText().toString();
-                String email=edtEmail.getText().toString();
-                String birthday=edtBirthday.getText().toString();
-                String profession=edtProfession.getText().toString();
-                String gender=spinnerLanguages.getSelectedItem().toString();
-                User user=new User(phonenumber,fullname,email,birthday,profession,gender);
-                userDBReference.push().setValue(user);
+                String phonenumber= edtPN.getText().toString();
+                String fullName = edtFN.getText().toString();
+                String email = edtEmail.getText().toString();
+                String birthday = edtBirthday.getText().toString();
+                String profession = edtProfession.getText().toString();
+                String gender = spinnerLanguages.getSelectedItem().toString();
+                User user = new User(phonenumber,fullName,email,birthday,profession,gender);
+                userDBReference.child(FirebaseAuth.getInstance().getUid()).child("FullName").setValue(fullName);
+                userDBReference.child(FirebaseAuth.getInstance().getUid()).child("Phone").setValue(phonenumber);
+                userDBReference.child(FirebaseAuth.getInstance().getUid()).child("Birthday").setValue(birthday);
+                userDBReference.child(FirebaseAuth.getInstance().getUid()).child("Profession").setValue(profession);
+                userDBReference.child(FirebaseAuth.getInstance().getUid()).child("Gender").setValue(gender);
                 Toast.makeText(UpdateProfileActivity.this,"Data inserted",Toast.LENGTH_SHORT).show();
                 Intent intent=new Intent(UpdateProfileActivity.this, UserProfileActivity.class);
                 startActivity(intent);
-
             }
         });
 

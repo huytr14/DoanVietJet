@@ -85,7 +85,7 @@
                 android:layout_marginRight="100dp">
 
                 <ImageButton
-                    android:id="@+id/imageButton"
+                    android:id="@+id/btnTicket"
                     android:layout_width="60dp"
                     android:layout_height="60dp"
                     android:layout_marginTop="6dp"
