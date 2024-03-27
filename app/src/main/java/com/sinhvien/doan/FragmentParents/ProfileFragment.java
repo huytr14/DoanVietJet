@@ -1,9 +1,12 @@
 package com.sinhvien.doan.FragmentParents;
 
+import static android.content.ContentValues.TAG;
+
 import android.app.Activity;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,6 +17,11 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 import com.sinhvien.doan.Activity.UserProfileActivity;
 import com.sinhvien.doan.LoginNRegis.LoginWithEmail;
 import com.sinhvien.doan.R;
@@ -33,6 +41,25 @@ public class ProfileFragment extends Fragment {
         Button btnLogout=(Button) view.findViewById(R.id.btnLogout);
         Button btnUser=(Button) view.findViewById(R.id.btnUser);
         Button btnNoti=(Button) view.findViewById(R.id.btnNoti);
+
+        DatabaseReference rootRef = FirebaseDatabase.getInstance().getReference("User");
+        DatabaseReference userRef = rootRef.child(FirebaseAuth.getInstance().getUid());
+
+        userRef.addValueEventListener(new ValueEventListener() {
+            String phonenumber,fullName,Email,birthday,profession,gender;
+            @Override
+            public void onDataChange(DataSnapshot keyId) {
+                fullName = keyId.child("FullName").getValue(String.class);
+                btnUser.setText(fullName);
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+                // Getting Post failed, log a message
+                Log.w(TAG, "Failed to read value", databaseError.toException());
+                // ...
+            }
+        });
         btnNoti.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
