@@ -13,7 +13,12 @@
           "package_name": "com.sinhvien.doan"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "562580008442-ghf4co5ij876fobdlf1ne5jm4mf1p01g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyCw64QgBojce-g7H45uWIbpxBO_6JuxPF4"
@@ -21,7 +26,12 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "562580008442-ghf4co5ij876fobdlf1ne5jm4mf1p01g.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         }
       }
     }

@@ -22,7 +22,8 @@
     <string-array name="languages">
         <item>Male</item>
         <item>Female</item>
-    </string-array>
+    </string-array><string name="default_web_client_id" translatable="false">562580008442-ghf4co5ij876fobdlf1ne5jm4mf1p01g.apps.googleusercontent.com</string>
+
 
 
 </resources>
