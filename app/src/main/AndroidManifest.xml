@@ -20,22 +20,43 @@
         android:theme="@style/Theme.DoAn"
         tools:targetApi="31">
         <activity
-            android:name=".Activity.UpdateProfileActivity"
+            android:name=".LoginNRegis.ForgotPass"
             android:exported="false" />
+        <activity
+            android:name=".Admin.ManagerTicketCard.ViewListTicket"
+            android:exported="false" />
+        <activity
+            android:name=".Admin.ManagerTicketCard.CreateTrip"
+            android:exported="true" />
+        <activity
+            android:name=".Admin.ManagerTicketCard.ManagerTicket"
+            android:exported="true" />
+        <activity
+            android:name=".Admin.ManagerProfileUser.UpdateUser"
+            android:exported="false" />
+        <activity
+            android:name=".Admin.ManagerProfileUser.ViewAccount"
+            android:exported="true" />
+        <activity
+            android:name=".Admin.IndexAdmin"
+            android:exported="true" />
+        <activity
+            android:name=".Booking.MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.Buslist"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.UpdateProfileActivity"
+            android:exported="true" />
         <activity
             android:name=".Activity.UserProfileActivity"
-            android:exported="false" />
-        <activity
-            android:name=".ProfileFragment.Profile"
             android:exported="false" />
         <activity
             android:name=".LoginNRegis.LoginWithEmail"
             android:exported="true" />
         <activity
             android:name=".LoginNRegis.RegisterWithEmail"
-            android:exported="true" />
-        <activity
-            android:name=".LoginNRegis.SetUpNameUser"
             android:exported="true" />
         <activity
             android:name=".Activity.Index"

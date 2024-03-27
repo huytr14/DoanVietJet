@@ -31,7 +31,7 @@ public class UpdateProfileActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_update_profile);
-        userDBReference= FirebaseDatabase.getInstance().getReference().child("User");
+        userDBReference.getDatabase().getReference().child("User");
         edtPN=findViewById(R.id.edtPhoneNumber);
         edtFN=findViewById(R.id.edtFullName);
         edtEmail=findViewById(R.id.edtEmail);
@@ -59,7 +59,6 @@ public class UpdateProfileActivity extends AppCompatActivity {
                 Toast.makeText(UpdateProfileActivity.this,"Data inserted",Toast.LENGTH_SHORT).show();
                 Intent intent=new Intent(UpdateProfileActivity.this, UserProfileActivity.class);
                 startActivity(intent);
-
             }
         });
 

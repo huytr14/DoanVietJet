@@ -109,7 +109,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="15dp"
-                android:textColor="@color/Red"
+                android:textColor="@color/blue"
                 android:text="Back to login"/>
         </LinearLayout>
 
@@ -122,18 +122,15 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.869">
+
             <Button
                 android:id="@+id/btnCont"
                 android:layout_width="337dp"
                 android:layout_height="65dp"
-                android:backgroundTint="@color/orange"
+                android:backgroundTint="@color/blue"
                 android:text="Continue"
-                android:textColorHint="#FF5722"
-                android:textSize="20dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                android:textSize="20dp" />
+
             <ProgressBar
                 android:id="@+id/progressBar"
                 android:layout_width="40dp"
